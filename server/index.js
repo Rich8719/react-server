@@ -1,8 +1,14 @@
 const express = require("express")
 const bodyParser = require("body-parser")
+const cors = require("cors")
 const pino = require("express-pino-logger")()
 
+const corsOptions = {
+  origin: "http://localhost:3000"
+}
 const app = express()
+
+app.use(cors(corsOptions))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(pino)
 

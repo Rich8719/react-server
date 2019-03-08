@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import './App.css'
+import React, { Component } from "react"
+import "./App.css"
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: '',
-      greeting: ''
+      name: "",
+      greeting: ""
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -35,7 +35,9 @@ class App extends Component {
             value={this.state.name}
             onChange={this.handleChange}
           />
+          <button type="submit">Submit</button>
         </form>
+        <p>{this.state.greeting}</p>
       </div>
     )
   }
